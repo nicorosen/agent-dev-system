@@ -150,7 +150,7 @@ Exit criteria:
 
 ## Phase 7: Roll Out To The Next Repo
 
-Status: ERP rollout staged, pending copy approval
+Status: ERP rollout branch pushed, pending PR review
 
 Todos:
 
@@ -158,9 +158,9 @@ Todos:
 - [x] Perform read-only audit.
 - [x] Generate repo-specific values file.
 - [x] Render scaffold to staging.
-- [ ] Review with user before copying.
-- [ ] Copy into approved branch/worktree.
-- [ ] Validate and report.
+- [x] Review with user before copying.
+- [x] Copy into approved branch/worktree.
+- [x] Validate and report.
 
 Exit criteria:
 

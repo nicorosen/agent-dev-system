@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+"""List or run repo-approved test commands."""
+
+from __future__ import annotations
+
+import argparse
+import shlex
+import subprocess
+from pathlib import Path
+
+
+COMMAND_FILE = Path(".agent/test-commands.txt")
+DISALLOWED_TOKENS = {";", "&&", "||", "|", ">", ">>", "<", "$(", "`"}
+
+
+def load_commands() -> list[str]:
+    if not COMMAND_FILE.is_file():
+        return []
+    return [
+        line.strip()
+        for line in COMMAND_FILE.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    ]
+
+
+def validate_command(command: str) -> list[str]:
+    argv = shlex.split(command)
+    if not argv:
+        raise ValueError("blank command")
+    if any(token in command for token in DISALLOWED_TOKENS):
+        raise ValueError(f"shell control syntax is not allowed: {command}")
+    return argv
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="List or run approved local test commands.")
+    parser.add_argument("--run", action="store_true", help="Run commands from .agent/test-commands.txt.")
+    args = parser.parse_args()
+
+    commands = load_commands()
+    if not commands:
+        print("No .agent/test-commands.txt file is configured.")
+        return 0
+
+    if not args.run:
+        print("Configured test commands:")
+        for command in commands:
+            print(f"- {command}")
+        print("Use --run to execute them.")
+        return 0
+
+    for command in commands:
+        print(f"## {command}")
+        try:
+            argv = validate_command(command)
+        except ValueError as exc:
+            print(f"FAIL {exc}")
+            return 1
+        result = subprocess.run(argv, check=False)
+        if result.returncode != 0:
+            return result.returncode
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

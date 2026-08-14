@@ -1,6 +1,10 @@
 AGENTS.md
 CLAUDE.md
 .agent/README.md
+.agent/bin/agent_diff
+.agent/bin/agent_policy_check
+.agent/bin/agent_status
+.agent/bin/agent_test
 .agent/policies/context-budget.md
 .agent/policies/repo-safety.md
 .agent/policies/review-gate.md
@@ -8,4 +12,3 @@ CLAUDE.md
 .agent/policies/testing.md
 .agent/task-packet-template.md
 .codex/README.md
-

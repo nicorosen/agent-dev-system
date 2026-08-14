@@ -87,6 +87,7 @@ def render_file(src: Path, dst: Path, values: dict[str, str]) -> None:
     dst.parent.mkdir(parents=True, exist_ok=True)
     text = src.read_text(encoding="utf-8")
     dst.write_text(render_text(text, values), encoding="utf-8")
+    dst.chmod(src.stat().st_mode & 0o777)
 
 
 def render_tree(src: Path, dst: Path, values: dict[str, str]) -> None:

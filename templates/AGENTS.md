@@ -30,6 +30,8 @@ Add repo-specific docs here:
 
 {{DEFAULT_COMMANDS}}
 
+Use `.agent/bin/agent_status`, `.agent/bin/agent_diff`, `.agent/bin/agent_test`, and `.agent/bin/agent_policy_check` when you need bounded, agent-facing repo checks.
+
 Only run outward-facing, hardware-facing, production-writing, destructive, or paid-review commands when the user has approved that specific operation.
 
 ## Default Search Scope

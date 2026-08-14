@@ -8,7 +8,7 @@ Use this as the persistent todo list for the provider-neutral agent development 
 - [x] Phase 1: Build provider-neutral scaffold in global project
 - [x] Phase 2: Harden scaffold and rollout process
 - [x] Phase 3: Scaffold-test in `misalud-lab-lis`
-- [ ] Phase 4: Add bounded agent-facing scripts
+- [x] Phase 4: Add bounded agent-facing scripts
 - [ ] Phase 5: Normalize reusable skills
 - [ ] Phase 6: Finalize telemetry and reporting
 - [ ] Phase 7: Roll out to the next repo
@@ -99,16 +99,16 @@ Exit criteria:
 
 ## Phase 4: Add Bounded Agent-Facing Scripts
 
-Status: pending
+Status: complete
 
 Todos:
 
-- [ ] Design provider-neutral `agent_status` behavior.
-- [ ] Design provider-neutral `agent_diff` behavior.
-- [ ] Design provider-neutral `agent_test` behavior.
-- [ ] Design provider-neutral `agent_policy_check` behavior.
-- [ ] Add templates or generators for those scripts.
-- [ ] Validate scripts never print sensitive file contents by default.
+- [x] Design provider-neutral `agent_status` behavior.
+- [x] Design provider-neutral `agent_diff` behavior.
+- [x] Design provider-neutral `agent_test` behavior.
+- [x] Design provider-neutral `agent_policy_check` behavior.
+- [x] Add templates or generators for those scripts.
+- [x] Validate scripts never print sensitive file contents by default.
 
 Exit criteria:
 

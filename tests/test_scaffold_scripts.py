@@ -62,6 +62,60 @@ class ScaffoldScriptTests(unittest.TestCase):
             )
             self.assertEqual(actual, expected)
 
+    def test_agent_diff_reports_names_without_file_contents(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            out = tmp_path / "scaffold"
+            render = self.run_cmd(
+                str(RENDER),
+                "--values",
+                str(VALUES),
+                "--out",
+                str(out),
+            )
+            self.assertEqual(render.returncode, 0, render.stderr + render.stdout)
+
+            repo = tmp_path / "repo"
+            repo.mkdir()
+            subprocess.run(["git", "init"], cwd=repo, capture_output=True, text=True, check=True)
+            subprocess.run(
+                ["git", "config", "user.email", "agent@example.invalid"],
+                cwd=repo,
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            subprocess.run(
+                ["git", "config", "user.name", "Agent Test"],
+                cwd=repo,
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            tracked = repo / "tracked.txt"
+            tracked.write_text("before\n", encoding="utf-8")
+            subprocess.run(["git", "add", "tracked.txt"], cwd=repo, capture_output=True, text=True, check=True)
+            subprocess.run(
+                ["git", "commit", "-m", "seed"],
+                cwd=repo,
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+
+            tracked.write_text("SECRET_PAYLOAD_SHOULD_NOT_PRINT\n", encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, str(out / ".agent" / "bin" / "agent_diff")],
+                cwd=repo,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
+            self.assertIn("M\ttracked.txt", result.stdout)
+            self.assertNotIn("SECRET_PAYLOAD_SHOULD_NOT_PRINT", result.stdout)
+
     def test_render_rejects_unknown_values(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             tmp_path = Path(tmp)

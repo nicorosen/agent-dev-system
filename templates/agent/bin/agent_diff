@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+"""Print a bounded Git diff summary without file contents."""
+
+from __future__ import annotations
+
+import subprocess
+import sys
+
+
+def git(*args: str) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        ["git", *args],
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+
+
+def print_section(title: str, result: subprocess.CompletedProcess[str]) -> int:
+    print(f"## {title}")
+    if result.returncode != 0:
+        print(result.stderr.strip() or result.stdout.strip() or "git command failed")
+        return result.returncode
+    output = result.stdout.strip()
+    print(output if output else "No changes.")
+    return 0
+
+
+def main() -> int:
+    inside = git("rev-parse", "--is-inside-work-tree")
+    if inside.returncode != 0:
+        print("Not inside a Git worktree.", file=sys.stderr)
+        return inside.returncode
+
+    rc = 0
+    rc = max(rc, print_section("Staged changes", git("diff", "--cached", "--name-status")))
+    print()
+    rc = max(rc, print_section("Unstaged changes", git("diff", "--name-status")))
+    print()
+    rc = max(rc, print_section("Untracked files", git("ls-files", "--others", "--exclude-standard")))
+    return rc
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

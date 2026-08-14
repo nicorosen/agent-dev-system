@@ -10,6 +10,10 @@ from pathlib import Path
 REQUIRED_FILES = [
     "AGENTS.md",
     ".agent/README.md",
+    ".agent/bin/agent_diff",
+    ".agent/bin/agent_policy_check",
+    ".agent/bin/agent_status",
+    ".agent/bin/agent_test",
     ".agent/policies/repo-safety.md",
     ".agent/policies/context-budget.md",
     ".agent/policies/testing.md",
@@ -21,6 +25,10 @@ REQUIRED_FILES = [
 TEMPLATE_FILES = [
     "AGENTS.md",
     "agent/README.md",
+    "agent/bin/agent_diff",
+    "agent/bin/agent_policy_check",
+    "agent/bin/agent_status",
+    "agent/bin/agent_test",
     "agent/policies/repo-safety.md",
     "agent/policies/context-budget.md",
     "agent/policies/testing.md",

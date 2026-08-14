@@ -11,6 +11,10 @@ Provider-specific adapters should stay thin:
 
 ## Files
 
+- `bin/agent_status`: bounded branch, head, and short status output for handoffs.
+- `bin/agent_diff`: bounded staged, unstaged, and untracked file summaries without raw file contents.
+- `bin/agent_test`: lists or runs commands from `.agent/test-commands.txt` without shell control syntax.
+- `bin/agent_policy_check`: verifies the canonical scaffold files and references are present.
 - `policies/repo-safety.md`: sensitive data, credentials, external systems, and destructive-operation rules.
 - `policies/context-budget.md`: search scope, excluded paths, large-context controls, and task packets.
 - `policies/testing.md`: safe default validation commands and escalation rules.
@@ -21,4 +25,3 @@ Provider-specific adapters should stay thin:
 ## Rule Precedence
 
 Follow direct user instructions first. Then follow `AGENTS.md` and this policy pack. Then follow provider-specific adapter files. If there is a conflict, stop and ask before weakening a safety control.
-

@@ -150,14 +150,14 @@ Exit criteria:
 
 ## Phase 7: Roll Out To The Next Repo
 
-Status: pending pilot validation
+Status: ERP rollout staged, pending copy approval
 
 Todos:
 
-- [ ] Select next repo.
-- [ ] Perform read-only audit.
-- [ ] Generate repo-specific values file.
-- [ ] Render scaffold to staging.
+- [x] Select next repo: `misalud-lab-erp`.
+- [x] Perform read-only audit.
+- [x] Generate repo-specific values file.
+- [x] Render scaffold to staging.
 - [ ] Review with user before copying.
 - [ ] Copy into approved branch/worktree.
 - [ ] Validate and report.

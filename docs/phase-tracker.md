@@ -7,7 +7,7 @@ Use this as the persistent todo list for the provider-neutral agent development 
 - [x] Phase 0: Create control project and audit pilot repo
 - [x] Phase 1: Build provider-neutral scaffold in global project
 - [x] Phase 2: Harden scaffold and rollout process
-- [ ] Phase 3: Scaffold-test in `misalud-lab-lis`
+- [x] Phase 3: Scaffold-test in `misalud-lab-lis`
 - [ ] Phase 4: Add bounded agent-facing scripts
 - [ ] Phase 5: Normalize reusable skills
 - [ ] Phase 6: Finalize telemetry and reporting
@@ -58,7 +58,7 @@ Done:
 
 ## Phase 2: Harden Scaffold And Rollout Process
 
-Status: complete, pending commit decision
+Status: complete
 
 Todos:
 
@@ -67,7 +67,7 @@ Todos:
 - [x] Add a sample rendered scaffold fixture for `misalud-lab-lis`.
 - [x] Add script tests or fixture checks for `render_scaffold.py` and `check_scaffold.py`.
 - [x] Confirm provider-neutral templates do not encode Claude-only behavior as policy.
-- [ ] Decide whether to commit the global project before pilot testing.
+- [x] Decide whether to commit the global project before pilot testing.
 
 Exit criteria:
 
@@ -77,7 +77,7 @@ Exit criteria:
 
 ## Phase 3: Scaffold-Test In `misalud-lab-lis`
 
-Status: validated in isolated worktree, pending pilot commit decision
+Status: complete
 
 Todos:
 
@@ -88,7 +88,8 @@ Todos:
 - [x] Compare old `CLAUDE.md` policy against rendered `AGENTS.md`.
 - [x] Validate no safety rule was lost.
 - [x] Validate no ignored/sensitive/generated paths are staged.
-- [ ] Stop before staging or committing unless separately approved.
+- [x] Stop before staging or committing unless separately approved.
+- [x] Commit approved pilot scaffold files on `agent/provider-neutral-scaffold-test` as `65df16b`.
 
 Exit criteria:
 

@@ -9,7 +9,7 @@ Use this as the persistent todo list for the provider-neutral agent development 
 - [x] Phase 2: Harden scaffold and rollout process
 - [x] Phase 3: Scaffold-test in `misalud-lab-lis`
 - [x] Phase 4: Add bounded agent-facing scripts
-- [ ] Phase 5: Normalize reusable skills
+- [x] Phase 5: Normalize reusable skills
 - [ ] Phase 6: Finalize telemetry and reporting
 - [ ] Phase 7: Roll out to the next repo
 
@@ -117,16 +117,16 @@ Exit criteria:
 
 ## Phase 5: Normalize Reusable Skills
 
-Status: pending
+Status: complete
 
 Todos:
 
-- [ ] Harden review skill template.
-- [ ] Harden security skill template.
-- [ ] Harden database skill template.
-- [ ] Harden docs skill template.
-- [ ] Add guidance for provider-specific skill adapters where needed.
-- [ ] Validate skill templates cite canonical repo policies instead of duplicating them.
+- [x] Harden review skill template.
+- [x] Harden security skill template.
+- [x] Harden database skill template.
+- [x] Harden docs skill template.
+- [x] Add guidance for provider-specific skill adapters where needed.
+- [x] Validate skill templates cite canonical repo policies instead of duplicating them.
 
 Exit criteria:
 

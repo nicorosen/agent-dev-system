@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "repo": {
+    "name": "misalud-lab-lis",
+    "path": null,
+    "remote": "https://github.com/nicorosen/misalud-lab-lis.git",
+    "commit": "370b44e",
+    "branch": "main",
+    "worktree_path": null
+  },
+  "task_id": "phase-6-fixture",
+  "provider": "openai",
+  "tool": "codex",
+  "model": "gpt-5-codex",
+  "session_id": "fixture-openai-codex",
+  "started_at": "2026-08-14T16:12:00Z",
+  "ended_at": "2026-08-14T16:18:00Z",
+  "usage": {
+    "input_tokens": null,
+    "output_tokens": 300,
+    "cache_read_tokens": null,
+    "cache_write_tokens": null,
+    "cache_miss_tokens": null,
+    "reasoning_tokens": 50,
+    "total_tokens": null
+  },
+  "cost": {
+    "currency": "USD",
+    "total_cost": 0.005,
+    "review_cost": null
+  },
+  "merged_pr": {
+    "id": "1",
+    "url": "https://github.com/nicorosen/misalud-lab-lis/pull/1",
+    "merged_at": "2026-08-14T16:10:00Z"
+  },
+  "artifacts": [
+    {
+      "kind": "task-summary",
+      "path": "artifacts/agent-telemetry/sanitized/openai-codex-task.json",
+      "sanitized": true
+    }
+  ],
+  "notes": "Sanitized fixture. Missing provider metrics are null rather than estimated."
+}

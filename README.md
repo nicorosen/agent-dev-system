@@ -47,6 +47,12 @@ Check a rendered scaffold:
 python3 scripts/check_scaffold.py /tmp/misalud-lab-lis-scaffold
 ```
 
+Validate sanitized telemetry examples:
+
+```bash
+python3 scripts/validate_telemetry.py examples/telemetry
+```
+
 Do not copy rendered files into a target repo until the scaffold-test checklist is approved.
 
 ## Key Files
@@ -54,6 +60,7 @@ Do not copy rendered files into a target repo until the scaffold-test checklist 
 - `templates/`: reusable provider-neutral scaffold.
 - `scripts/render_scaffold.py`: renders templates into a staging directory only.
 - `scripts/check_scaffold.py`: validates required files and references.
+- `scripts/validate_telemetry.py`: validates sanitized telemetry and reports aggregate metrics.
 - `schemas/scaffold-values.schema.json`: required values contract for scaffold rendering.
 - `schemas/agent-telemetry.schema.json`: sanitized telemetry record schema.
 - `docs/scaffold-test-checklist.md`: target-repo copy and validation checklist.

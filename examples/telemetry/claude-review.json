@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "repo": {
+    "name": "misalud-lab-lis",
+    "path": null,
+    "remote": "https://github.com/nicorosen/misalud-lab-lis.git",
+    "commit": "65df16b",
+    "branch": "agent/provider-neutral-scaffold-test",
+    "worktree_path": null
+  },
+  "task_id": "phase-6-fixture",
+  "provider": "anthropic",
+  "tool": "claude-code",
+  "model": "claude-sonnet",
+  "session_id": "fixture-claude-review",
+  "started_at": "2026-08-14T16:00:00Z",
+  "ended_at": "2026-08-14T16:05:00Z",
+  "usage": {
+    "input_tokens": 1000,
+    "output_tokens": 200,
+    "cache_read_tokens": 250,
+    "cache_write_tokens": 100,
+    "cache_miss_tokens": null,
+    "reasoning_tokens": null,
+    "total_tokens": 1200
+  },
+  "cost": {
+    "currency": "USD",
+    "total_cost": 0.0125,
+    "review_cost": 0.0125
+  },
+  "merged_pr": {
+    "id": "1",
+    "url": "https://github.com/nicorosen/misalud-lab-lis/pull/1",
+    "merged_at": "2026-08-14T16:10:00Z"
+  },
+  "artifacts": [
+    {
+      "kind": "review-summary",
+      "path": "artifacts/agent-telemetry/sanitized/claude-review-summary.json",
+      "sanitized": true
+    }
+  ],
+  "notes": "Sanitized fixture. No prompts, raw diffs, logs, PHI, credentials, or customer data."
+}

@@ -10,7 +10,7 @@ Use this as the persistent todo list for the provider-neutral agent development 
 - [x] Phase 3: Scaffold-test in `misalud-lab-lis`
 - [x] Phase 4: Add bounded agent-facing scripts
 - [x] Phase 5: Normalize reusable skills
-- [ ] Phase 6: Finalize telemetry and reporting
+- [x] Phase 6: Finalize telemetry and reporting
 - [ ] Phase 7: Roll out to the next repo
 
 ## Model Guidance
@@ -28,7 +28,7 @@ Use the cheapest model that can safely complete the phase. Escalate only when th
 | Phase 6: Telemetry | Cheap or medium reasoning | Schema/reporting work is contained. Escalate only for provider-specific cost/cache mapping. |
 | Phase 7: Next repo rollout | Medium reasoning by default | Start medium for repo audit and scaffold copy. Escalate for high-risk repos or policy conflicts. |
 
-Current recommendation: continue Phase 3 on a cheaper model unless changing `CLAUDE.md`, `.codex/`, hooks, review gates, or security policy equivalence.
+Current recommendation: continue Phase 7 with medium reasoning for the next repo audit and rollout planning.
 
 ## Phase 0: Create Control Project And Audit Pilot Repo
 
@@ -134,15 +134,15 @@ Exit criteria:
 
 ## Phase 6: Finalize Telemetry And Reporting
 
-Status: pending
+Status: complete
 
 Todos:
 
-- [ ] Add telemetry fixture examples.
-- [ ] Add schema validation command.
-- [ ] Define provider field mappings for Claude and OpenAI/Codex where available.
-- [ ] Define aggregate metrics: cache hit ratio, cache write ratio, cost per task, cost per merged PR.
-- [ ] Confirm telemetry never stores prompts, raw diffs, logs, PHI, credentials, or customer data.
+- [x] Add telemetry fixture examples.
+- [x] Add schema validation command.
+- [x] Define provider field mappings for Claude and OpenAI/Codex where available.
+- [x] Define aggregate metrics: cache hit ratio, cache write ratio, cost per task, cost per merged PR.
+- [x] Confirm telemetry never stores prompts, raw diffs, logs, PHI, credentials, or customer data.
 
 Exit criteria:
 

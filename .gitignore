@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+.venv/
+
+# Local/generated telemetry exports. Keep raw prompts, diffs, logs, PHI, and credentials out of git.
+telemetry/raw/
+artifacts/
+

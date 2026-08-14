@@ -1,0 +1,11 @@
+AGENTS.md
+CLAUDE.md
+.agent/README.md
+.agent/policies/context-budget.md
+.agent/policies/repo-safety.md
+.agent/policies/review-gate.md
+.agent/policies/task-isolation.md
+.agent/policies/testing.md
+.agent/task-packet-template.md
+.codex/README.md
+

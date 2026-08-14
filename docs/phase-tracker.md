@@ -6,12 +6,29 @@ Use this as the persistent todo list for the provider-neutral agent development 
 
 - [x] Phase 0: Create control project and audit pilot repo
 - [x] Phase 1: Build provider-neutral scaffold in global project
-- [ ] Phase 2: Harden scaffold and rollout process
+- [x] Phase 2: Harden scaffold and rollout process
 - [ ] Phase 3: Scaffold-test in `misalud-lab-lis`
 - [ ] Phase 4: Add bounded agent-facing scripts
 - [ ] Phase 5: Normalize reusable skills
 - [ ] Phase 6: Finalize telemetry and reporting
 - [ ] Phase 7: Roll out to the next repo
+
+## Model Guidance
+
+Use the cheapest model that can safely complete the phase. Escalate only when the phase involves security/HIPAA equivalence, provider adapter behavior, review-gate logic, or ambiguous repo-specific policy.
+
+| Phase | Recommended model tier | Why |
+|---|---|---|
+| Phase 0: Audit | High or medium-high reasoning | Read-only audit must preserve security, HIPAA, hook, and provider-policy details. |
+| Phase 1: Global scaffold | Medium reasoning | Template design benefits from coherent abstraction, but no target repo edits. |
+| Phase 2: Scaffold hardening | Medium reasoning | Values contract, tests, and rollout controls need careful design but are contained. |
+| Phase 3: Pilot scaffold test | Cheap or medium reasoning | Copying `AGENTS.md` and `.agent/` plus validation is mostly mechanical. Escalate if comparing safety policies gets ambiguous. |
+| Phase 4: Bounded scripts | Medium reasoning | Script behavior affects future agent safety and should be designed carefully. |
+| Phase 5: Reusable skills | Medium-high reasoning | Skills shape future review/security/database behavior across repos. |
+| Phase 6: Telemetry | Cheap or medium reasoning | Schema/reporting work is contained. Escalate only for provider-specific cost/cache mapping. |
+| Phase 7: Next repo rollout | Medium reasoning by default | Start medium for repo audit and scaffold copy. Escalate for high-risk repos or policy conflicts. |
+
+Current recommendation: continue Phase 3 on a cheaper model unless changing `CLAUDE.md`, `.codex/`, hooks, review gates, or security policy equivalence.
 
 ## Phase 0: Create Control Project And Audit Pilot Repo
 

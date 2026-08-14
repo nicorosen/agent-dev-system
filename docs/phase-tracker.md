@@ -11,7 +11,7 @@ Use this as the persistent todo list for the provider-neutral agent development 
 - [x] Phase 4: Add bounded agent-facing scripts
 - [x] Phase 5: Normalize reusable skills
 - [x] Phase 6: Finalize telemetry and reporting
-- [ ] Phase 7: Roll out to the next repo
+- [x] Phase 7: Roll out to the next repo
 
 ## Model Guidance
 
@@ -150,7 +150,7 @@ Exit criteria:
 
 ## Phase 7: Roll Out To The Next Repo
 
-Status: ERP rollout PR open and mergeable
+Status: complete
 
 Todos:
 
@@ -164,4 +164,4 @@ Todos:
 
 Exit criteria:
 
-- The process works repeatably beyond `misalud-lab-lis`.
+- [x] The process works repeatably beyond `misalud-lab-lis`.

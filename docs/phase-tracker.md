@@ -150,7 +150,7 @@ Exit criteria:
 
 ## Phase 7: Roll Out To The Next Repo
 
-Status: ERP rollout branch pushed, pending PR review
+Status: ERP rollout PR open and mergeable
 
 Todos:
 

@@ -154,7 +154,7 @@ After the main checkout was confirmed clean, an isolated worktree was created:
 - Branch: `agent/provider-neutral-scaffold-erp`
 - Base: `main` at `a6373a8`
 - Commit: `2ef4eee chore: add provider-neutral agent scaffold`
-- PR URL: `https://github.com/nicorosen/misalud-lab-erp/pull/new/agent/provider-neutral-scaffold-erp`
+- PR: `https://github.com/nicorosen/misalud-lab-erp/pull/1`
 
 Copied files:
 
@@ -177,3 +177,11 @@ Validation:
 ```text
 PASS scaffold valid: /Users/nicorosen/code_projects/misalud/misalud-lab-erp-agent-provider-neutral-scaffold
 ```
+
+PR state after creation:
+
+- Open
+- Mergeable
+- 1 commit
+- 12 changed files
+- 562 additions

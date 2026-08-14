@@ -16,9 +16,15 @@ Ignore rules can be safety controls. Do not add unignore exceptions for sensitiv
 
 Before touching data paths, identify the resolver or config source of truth and state which path or environment is being used.
 
+{{PRODUCTION_DATA_PATH_RULE}}
+
 External-write operations require explicit user approval:
 
 - {{EXTERNAL_WRITE_OPERATIONS}}
+
+{{CONFIG_CHANGE_RULE}}
+
+{{PERMISSION_BOUNDARY_RULE}}
 
 ## Security Doctrine
 
@@ -32,4 +38,3 @@ Preserve existing repo doctrine and review gates, especially:
 ## Git Safety
 
 Do not revert unrelated user work. Do not use destructive git commands unless the user explicitly asks for them. Do not stage or commit ignored local settings, data exports, logs, databases, generated build output, or review artifacts.
-

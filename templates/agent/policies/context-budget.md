@@ -29,7 +29,6 @@ If a task requires one of these paths, state why, read the smallest possible sli
 
 - Keep one task per session, branch, or worktree where practical.
 - Use task packets for handoffs or long-running work.
-- Suggest compaction at natural task boundaries or when the thread becomes large.
+- {{SESSION_COMPACTION_RULE}}
 - Suggest clearing context when switching to an unrelated task.
 - Do not carry unrelated repo history into a new task packet.
-

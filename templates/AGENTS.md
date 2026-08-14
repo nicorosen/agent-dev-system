@@ -24,6 +24,8 @@ Add repo-specific docs here:
 
 {{REPO_LAYOUT}}
 
+{{REPO_LOCAL_CONVENTIONS}}
+
 ## Default Commands
 
 {{DEFAULT_COMMANDS}}
@@ -43,4 +45,3 @@ Do not read or search large, generated, ignored, PHI-bearing, credential-bearing
 - Do not introduce new remote automation, CI, deploy keys, mirrors, or repo-read integrations without explicit approval and a security review.
 - Do not stage, commit, push, or run paid review gates unless the user approves that step.
 - If unrelated user changes exist, work around them and do not revert them.
-

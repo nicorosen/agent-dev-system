@@ -60,17 +60,17 @@ Exit criteria:
 
 ## Phase 3: Scaffold-Test In `misalud-lab-lis`
 
-Status: pending approval
+Status: validated in isolated worktree, pending pilot commit decision
 
 Todos:
 
-- [ ] Confirm branch/worktree strategy.
-- [ ] Confirm exact copied files.
-- [ ] Render scaffold to a staging directory.
-- [ ] Copy only approved files into the pilot repo.
-- [ ] Compare old `CLAUDE.md` policy against rendered `AGENTS.md`.
-- [ ] Validate no safety rule was lost.
-- [ ] Validate no ignored/sensitive/generated paths are staged.
+- [x] Confirm branch/worktree strategy.
+- [x] Confirm exact copied files.
+- [x] Render scaffold to a staging directory.
+- [x] Copy only approved files into the pilot repo.
+- [x] Compare old `CLAUDE.md` policy against rendered `AGENTS.md`.
+- [x] Validate no safety rule was lost.
+- [x] Validate no ignored/sensitive/generated paths are staged.
 - [ ] Stop before staging or committing unless separately approved.
 
 Exit criteria:

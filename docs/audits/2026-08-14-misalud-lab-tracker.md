@@ -222,3 +222,48 @@ Local cleanup completed:
 - Removed worktree: `/Users/nicorosen/code_projects/misalud/misalud-lab-tracker-agent-policy-normalization`
 - Deleted local branch: `agent/normalize-agent-policy`
 - Confirmed tracker main status: `## main...origin/main`
+
+## Provider Adapter Normalization Result
+
+After PR #3 landed, a second isolated worktree was created:
+
+- Worktree: `/Users/nicorosen/code_projects/misalud/misalud-lab-tracker-provider-adapter-normalization`
+- Branch: `agent/normalize-provider-adapters`
+- Base: `main` at `f4c64772`
+- Commit: `f099440f Meta Update: normalize provider adapter references`
+- PR: `https://github.com/nicorosen/misalud-lab-tracker/pull/4`
+
+Changed files:
+
+- `AGENTS.md`: replaced stale `.Codex` path references with the actual `.claude/` context paths, `.codex/` hook path, and provider-specific MCP config locations.
+- `CLAUDE.md`: added a narrow provider-neutral policy pointer to `AGENTS.md` and fixed one unqualified `workflows.md` reference.
+- `.codex/agents/pm-analyst.toml`: replaced stale `.Codex/context` references with `.claude/context`.
+
+Not changed:
+
+- `.claude/` commands, skills, hooks, local state, and credentials.
+- `.codex/` settings and hooks, except the `pm-analyst` agent documentation string.
+- App scripts, compliance source docs, release artifacts, sync automation, and Google Drive symlink targets.
+
+Validation:
+
+```text
+PASS agent policy scaffold valid: /Users/nicorosen/code_projects/misalud/misalud-lab-tracker-provider-adapter-normalization
+PASS git diff --check
+PASS stale reference scan for .Codex, ~/.Codex, and "See workflows.md"
+PASS referenced context and hook file existence checks
+```
+
+Full tracker script tests were run after installing `.scripts` dependencies in the worktree. They showed the same existing baseline failures as PR #3 validation:
+
+- `lib/dep-graph.test.ts`: `daysToLaunch` is now `-100`, expected greater than 0.
+- `lib/milestones.test.ts`: three milestone/progress threshold failures.
+- Result: 142 passed, 4 failed.
+
+PR #4 state after creation:
+
+- Open
+- Draft
+- Mergeable
+- CodeRabbit: success
+- 1 commit

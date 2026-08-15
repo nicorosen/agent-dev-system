@@ -203,3 +203,52 @@ Proceed with a staged migration:
 
 Stop before Phase 1 implementation and get explicit approval for the first file batch.
 
+## Scaffold Rollout Result
+
+After the LIS checkout was confirmed clean on `main-dev`, the scaffold was installed in an isolated worktree:
+
+- Worktree: `/Users/nicorosen/code_projects/misalud/misalud-lab-lis-agent-provider-neutral-scaffold`
+- Branch: `agent/provider-neutral-scaffold-lis`
+- Base: `main-dev` at `da84961`
+- Commit: `8c617eb chore: add provider-neutral agent scaffold`
+- PR: `https://github.com/nicorosen/misalud-lab-lis/pull/2`
+
+Changed files:
+
+- `AGENTS.md`
+- `.agent/`
+- `CLAUDE.md`, with a narrow pointer to `AGENTS.md` as the provider-neutral policy entrypoint
+
+Not changed:
+
+- application code
+- tests
+- `.githooks/`
+- `.claude/`
+- `.codex/`
+- credentials
+- databases
+- logs
+- backups
+- artifacts
+- context dumps
+- station config
+- Crelio, Google Sheets, printer, hardware, or external-write workflows
+
+Validation:
+
+```text
+PASS scaffold valid: /Users/nicorosen/code_projects/misalud/misalud-lab-lis-agent-provider-neutral-scaffold
+PASS git diff --check
+PASS python3 -m py_compile run.py
+```
+
+PR #2 state after creation:
+
+- Open
+- Ready for review
+- Mergeable
+- CodeRabbit: success
+- 1 commit
+
+Merge was not performed yet because it requires explicit user approval.

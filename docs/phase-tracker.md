@@ -168,7 +168,7 @@ Exit criteria:
 
 ## Phase 8: Continue Rollout To Lightweight CRM Tool
 
-Status: in progress
+Status: complete
 
 Todos:
 
@@ -183,4 +183,17 @@ Todos:
 Exit criteria:
 
 - [x] The scaffold lands in a clean, low-conflict repo without exposing raw HubSpot exports or partner-share CSVs.
-- [ ] Add a git remote or choose a local merge path for `misalud-hubspot-exchange`.
+- [x] Local merge path chosen for `misalud-hubspot-exchange`.
+
+## Closeout
+
+Status: complete
+
+Completed repos:
+
+- `misalud-lab-lis`
+- `misalud-lab-erp`
+- `misalud-lab-tracker`
+- `misalud-hubspot-exchange`
+
+No further project rollouts are planned.
